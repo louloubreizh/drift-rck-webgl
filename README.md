@@ -10,4 +10,4 @@ Installer les dépendances avec `npm ci`, puis lancer `npm run dev`. Le lecteur 
 
 ## Mettre le build à jour
 
-Exporter la scène Unity `Jeu` en WebGL sans compression Unity et remplacer les fichiers dans `public/unity`. `npm run build` produit le site dans `dist`. Le workflow publie ce dossier sur GitHub Pages après chaque mise à jour de `main`.
+Exporter la scène Unity `Jeu` en WebGL sans compression Unity et remplacer les fichiers dans `public/unity`. React intègre le lecteur HTML généré par Unity. `npm run build` produit le site dans `dist` et donne au lecteur un chemin fondé sur l’empreinte du build pour garder le HTML et les fichiers Unity de la même version. Le workflow publie ce dossier sur GitHub Pages après chaque mise à jour de `main`.
