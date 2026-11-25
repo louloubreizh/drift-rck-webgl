@@ -1,0 +1,42 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, sans-serif;
+  color: #edf6fb;
+  background: #101822;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { width: min(100% - 2rem, 1120px); margin-inline: auto; }
+header, footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+header { padding-block: 1rem; }
+h1 { margin: 0; font-size: clamp(1.5rem, 4vw, 2.4rem); letter-spacing: -.045em; }
+h1 span, a { color: #88e9cc; }
+
+button {
+  border: 1px solid #536879;
+  border-radius: .4rem;
+  background: #1a2937;
+  padding: .65rem .8rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover { border-color: #88e9cc; }
+:focus-visible { outline: 2px solid #88e9cc; outline-offset: 3px; }
+.jeu { position: relative; aspect-ratio: 16 / 10; min-height: 250px; background: #0a1017; border: 1px solid #344758; }
+.jeu:fullscreen { width: 100vw; height: 100dvh; border: 0; }
+canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+.chargement { position: absolute; inset: 0; display: grid; align-content: center; justify-items: center; gap: 1rem; padding: 1rem; background: #0a1017; text-align: center; }
+progress { accent-color: #88e9cc; width: min(65%, 22rem); }
+footer { padding-block: .7rem; font-size: .88rem; color: #b5c5d1; }
+footer p { margin: 0; }
+footer a { flex: 0 0 auto; }
+
+@media (max-width: 700px) {
+  main { width: min(100% - 1rem, 1120px); }
+  .jeu { height: min(68dvh, 550px); }
+  footer { display: block; }
+  footer a { display: inline-block; margin-top: .65rem; }
+}
